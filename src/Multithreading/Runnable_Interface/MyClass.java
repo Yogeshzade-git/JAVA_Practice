@@ -7,6 +7,7 @@ public class MyClass extends MyClass2 implements Runnable {
         for (int i=0; i<100; i++){
             System.out.println("Current Thread" + Thread.currentThread().getName() + "Hello buddy!");
             greet();
+            Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
